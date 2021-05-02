@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+.red{
+    color:red;
+}
+.greenborder{
+    border:1px solid green;
+}
+.size20{font-size: 20px;}
+.blue{
+    background-color:aqua;
+}
+.toggle{
+    border:1px dashed red;
+    background-color: red;
+    font-style: italic;
+}
+.tooltip1{
+    display:inline-block;
+    border-bottom  :1px dotted blueviolet;
+    position :absolute;
+ 
+}

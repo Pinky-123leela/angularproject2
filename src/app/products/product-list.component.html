@@ -1,0 +1,36 @@
+<h1 [className]="'greenborder'" [innerText] ="title"></h1>
+<button [disabled] = "isDisabled" (click)="showTable()">{{buttonName}}</button>
+    <input type="text" [(ngModel)]="color">
+    <div class ="container">
+    <div *ngIf="show; else block1"></div>
+    <table class ="table table-bordered table-striped">
+        <tr>
+            <th>Id</th>
+            <th>Description</th>
+            <th>Cost</th>
+            <th>Stock</th>
+            </tr>
+        <tr *ngFor = "let p of products">
+            <td [ngClass]="{'red':true, 'size20':true}">{{p.id}}</td>
+            <td [ngStyle]={color:color}>{{p.description}}</td>
+            <td>{{p.cost | currency:'INR':true:'7.2-2'}}</td>
+            <td>{{p.stock}}</td>
+        </tr>
+    </table>
+    <ng-template #block2>
+        Product list is displayed
+    </ng-template>
+    <ng-template #block1>
+        No data
+    </ng-template>
+
+    <input type='text' [(ngModel)]="num"/>
+    {{num}}
+    <div [ngSwitch]="num">
+        <div *ngSwitchCase="1">One</div>
+        <div *ngSwitchCase="2">two</div>
+        <div *ngSwitchCase="3">three</div>
+        <div *ngSwitchDefault>Not in first three</div>
+    </div>
+</div>
+

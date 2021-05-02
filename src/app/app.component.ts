@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'project2';
+  showTitle=true
+  title = 'OnlinePizza';
+  Celsius:number=0
+  Farenheit:number=0
+  productname = 'keyboard'
+  email:string=""
+
+  display(){
+    console.log("hello")
+  }
 }
